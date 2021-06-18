@@ -46,6 +46,29 @@ arguments.
 
 3. Can you explain what a closure is and how you used it in the counter function? 
 
+A closure is a function which "closes" over a variable that is in its
+surrounding scope.
+```js
+function counter(initial) {
+    let ret = function() {
+        initial++;
+        return initial;
+    }
+    return ret;
+}
+
+let cnt = counter(0);
+console.log(cnt()); // 1
+console.log(cnt()); // 2
+```
+In the above example, we pass in in `0` as `initial` to `counter`. Normally
+the binding of `initial` to `0` would vanish after the execution of `counter`
+finished, but since in this case we return a function out of `counter`, that
+function "closes" over the values in scope when it is created and forces them
+to continue existing for as long as it does.
+We can see by executing `cnt` that it even preserves the value of the counter
+across executions.
+
 4. Describe the four principles of the 'this' keyword.
 
 5. Why do we need super() in an extended class?
