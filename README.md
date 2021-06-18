@@ -72,6 +72,11 @@ I did not use a closure in the sprint challenge, as it wasn't necessary.
 
 4. Describe the four principles of the 'this' keyword.
 
+ - If `this` is used in the global scope the user receives either the window object or the node console object depending on whether the execution environment is the browser or node.
+ - If `this` is used inside a function that is called using dot notation, as in `obj.method()`, `this` refers to the object to the left of the dot. In the case of this example, that is `obj`.
+ - If `this` is used inside a constructor function (a function intended to be called using `new`), then `this` refers to the new object that is being created by the function.
+ - If `this` is used inside a function that is being called using a method such as `.call` or `.apply`, then `this` refers to the object explicitly being passed to `.call` or `.apply`.
+
 5. Why do we need super() in an extended class?
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
