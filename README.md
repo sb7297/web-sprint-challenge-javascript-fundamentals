@@ -31,6 +31,19 @@ Edit this document to include your answers after each question. Make sure to lea
 
 2. Explain the difference between a callback and a higher order function.
 
+A callback is a function that is passed in as an argument to another function.
+A higher order function is a function that receives another function as an
+argument or returns a function.
+```js
+function H(f, g, x) {
+    return g(f(x)); 
+}
+```
+In the above, `H` is a higher order function because it takes `f` and `g` as
+arguments, and `f` and `g` are callbacks because they are passed in to `H` as
+arguments.
+
+
 3. Can you explain what a closure is and how you used it in the counter function? 
 
 4. Describe the four principles of the 'this' keyword.
