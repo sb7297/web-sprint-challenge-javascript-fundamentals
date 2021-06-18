@@ -29,6 +29,12 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+Both `.forEach` and `.map` take a callback function which is executed once for
+each element of the array. The difference is that `.map` automatically creates
+and returns a new array made from the return values of the callback executed on
+each element of the array, where `.forEach` does nothing with the callback's
+return value and returns nothing.
+
 2. Explain the difference between a callback and a higher order function.
 
 A callback is a function that is passed in as an argument to another function.
