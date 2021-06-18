@@ -68,6 +68,7 @@ function "closes" over the values in scope when it is created and forces them
 to continue existing for as long as it does.
 We can see by executing `cnt` that it even preserves the value of the counter
 across executions.
+I did not use a closure in the sprint challenge, as it wasn't necessary.
 
 4. Describe the four principles of the 'this' keyword.
 
