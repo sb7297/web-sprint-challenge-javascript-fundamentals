@@ -85,6 +85,13 @@ I did not use a closure in the sprint challenge, as it wasn't necessary.
 
 5. Why do we need super() in an extended class?
 
+We must explicitly call the constructor of the parent object, because Javascript
+won't do it for us. This way the child object retains all the properties of the
+parent along with its own particular properties.
+
+This is equivalent to `Parent.call(this, args)` in the constructor in the older
+style of object-orientation.
+
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
 ## Instructions
