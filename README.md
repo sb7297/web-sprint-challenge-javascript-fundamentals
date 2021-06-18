@@ -76,7 +76,21 @@ to continue existing for as long as it does.
 We can see by executing `cnt` that it even preserves the value of the counter
 across executions.
 
-I did not use a closure in the sprint challenge, as it wasn't necessary.
+The closure in the `summation` function in the challenge closes over the
+variable `num`, which is an argument to `summation`.
+```js
+function summation(num) {
+  let counter = function() {
+    if (num > 0) {
+      return num-- + counter();
+    }
+    else return 0;
+  };
+
+  return counter();
+}
+```
+
 
 4. Describe the four principles of the 'this' keyword.
 
