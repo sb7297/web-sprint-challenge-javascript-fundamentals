@@ -16,7 +16,11 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+/*
+When a function is declared and initialized, it "closes" over the variables
+that are in scope when it is declared. That means it has access to those
+variables even though they may not be passed in to the function.
+*/
 
 
 
